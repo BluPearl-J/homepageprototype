@@ -1,0 +1,39 @@
+/* Service pages (IT Consultancy, Web Development, ...). Loaded after style.css and header.css. */
+.sv-hero { padding: 3.5rem 0; }
+@media (min-width: 1024px) { .sv-hero { padding: 5rem 0; } }
+.sv-hero-in { display: grid; gap: 2.5rem; align-items: center; }
+.sv-hero-art { max-width: 28rem; width: 100%; margin: 0 auto; }
+.sv-art { display: block; width: 100%; height: auto; }
+.sv-hero-copy { text-align: center; }
+.sv-hero-copy .eyebrow { margin: 0 auto; }
+.sv-h1 { margin: 1.5rem 0 0; font-size: clamp(2.4rem, 5vw, 3.75rem); font-weight: 700; line-height: 1.05; letter-spacing: -.03em; color: #fff; }
+.sv-lead { margin: 1.5rem auto 0; max-width: 40rem; font-size: 1.15rem; line-height: 1.75rem; color: #cbd5e1; }
+@media (min-width: 1024px) {
+  .sv-hero-in { grid-template-columns: 5fr 7fr; gap: 4rem; }
+  .sv-hero-copy { text-align: left; }
+  .sv-hero-copy .eyebrow { margin: 0; }
+  .sv-lead { margin-left: 0; }
+}
+
+.sv-work { padding: 4rem 0 5rem; background: #fff; }
+.sv-work-head { margin-bottom: 2.5rem; }
+.sv-work-head h2 { margin: 0; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 600; letter-spacing: -.025em; color: #0b0f19; }
+.sv-work-head p { margin: .5rem 0 0; color: #667085; }
+
+.sv-grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .sv-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .sv-grid { grid-template-columns: repeat(3, 1fr); } }
+.sv-card { overflow: hidden; border-radius: 1rem; border: 1px solid #e5e7eb; background: #fff; box-shadow: 0 10px 35px -20px rgba(11,15,25,.25); }
+.sv-card-img { position: relative; aspect-ratio: 3 / 2; overflow: hidden; }
+.sv-card-art { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.sv-card:hover .sv-card-art { transform: scale(1.05); }
+.sv-overlay { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(11,15,25,.55); opacity: 0; transition: opacity .2s; }
+.sv-card:hover .sv-overlay, .sv-card:focus-within .sv-overlay { opacity: 1; }
+.sv-btn { display: inline-flex; align-items: center; min-height: 3rem; padding: 0 1.75rem; border-radius: 9999px; background: #e60067; color: #fff; font-weight: 600; text-decoration: none; transition: background .15s; }
+.sv-btn:hover { background: #c90059; }
+@media (hover: none) {
+  .sv-overlay { opacity: 1; background: linear-gradient(transparent 55%, rgba(11,15,25,.7)); place-items: end center; padding-bottom: 1rem; }
+}
+
+/* mobile menu: keep Services highlighted on service pages */
+.hd-mobile summary.hd-cur { color: #c70f5d; }
