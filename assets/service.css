@@ -156,3 +156,21 @@
 .ba-post-t { font-size: .9rem; line-height: 1.4; font-weight: 600; color: #1a1a1a; } .ba-post:hover .ba-post-t { color: #e60067; }
 .ba-cats { list-style: none; margin: 0; padding: 0; } .ba-cat { display: block; padding: .55rem .8rem; border-radius: .5rem; color: #475569; text-decoration: none; font-size: .95rem; } .ba-cat:hover { background: #f1f5f9; } .ba-cat.is-on { background: #fff0f6; color: #c70052; font-weight: 600; }
 .ba-tags { display: flex; flex-wrap: wrap; gap: .5rem; } .ba-tag { border-radius: 999px; background: #fff0f6; color: #c70052; padding: .25rem .75rem; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+
+/* ---- Use cases ---- */
+.uc-crumbs{display:flex;gap:.5rem;padding-top:1.5rem;padding-bottom:.5rem;font-size:.875rem;color:#64748b}
+.uc-crumbs a{color:#e60067;text-decoration:none}.uc-crumbs a:hover{text-decoration:underline}
+.uc-row{padding:4rem 0;background:#fff}.uc-alt{background:#f8fafc}
+.uc-grid{display:grid;gap:2.5rem;align-items:center}
+@media(min-width:1024px){.uc-grid{grid-template-columns:1fr 1fr;gap:4rem}.uc-alt .uc-copy{order:2}.uc-alt .uc-img{order:1}.uc-row{padding:5rem 0}}
+.uc-cat{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#e60067;background:#fdecf4;border-radius:999px;padding:.35rem .8rem}
+.uc-h{margin-top:1rem;font-size:1.875rem;line-height:1.15;font-weight:700;letter-spacing:-.02em;color:#0b0f19}
+@media(min-width:1024px){.uc-h{font-size:2.25rem}}
+.uc-p{margin-top:1.25rem;font-size:1rem;line-height:1.8;color:#475569}
+.uc-btn{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.75rem;background:#e60067;color:#fff;font-weight:600;padding:.8rem 1.6rem;border-radius:999px;text-decoration:none;transition:background .2s,transform .2s}
+.uc-btn:hover{background:#b8004f;transform:translateX(2px)}
+.uc-img{position:relative;display:block;border-radius:1.5rem;overflow:hidden}
+.uc-img .sv-frame{transition:transform .4s}
+.uc-img:hover .sv-frame{transform:scale(1.03)}
+.uc-over{position:absolute;inset:0;display:grid;place-items:center;background:rgba(11,15,25,.55);color:#fff;font-weight:600;font-size:1.125rem;opacity:0;transition:opacity .25s}
+.uc-img:hover .uc-over,.uc-img:focus-visible .uc-over{opacity:1}
